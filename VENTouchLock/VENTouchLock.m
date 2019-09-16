@@ -211,6 +211,7 @@ static NSString *const VENTouchLockUserDefaultsKeyTouchIDActivated = @"VENTouchL
             }
             dispatch_async(dispatch_get_main_queue(), ^{
                 self.backgroundLockVisible = YES;
+                displayController.modalPresentationStyle = UIModalPresentationFullScreen;
                 [rootViewController presentViewController:displayController animated:NO completion:nil];
             });
         }
