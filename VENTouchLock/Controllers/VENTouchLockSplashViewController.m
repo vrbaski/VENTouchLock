@@ -48,7 +48,8 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-    self.view.backgroundColor = [UIColor whiteColor];
+    self.view.backgroundColor =  [self.touchLock appearance].passcodeViewControllerBackgroundColor; // [UIColor whiteColor];
+    //self.view.backgroundColor =  [UIColor whiteColor];
     if (!self.isSnapshotViewController) {
         if (![VENTouchLock shouldUseTouchID]) {
             dispatch_async(dispatch_get_main_queue(), ^{
